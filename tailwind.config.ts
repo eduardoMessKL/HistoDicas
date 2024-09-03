@@ -13,6 +13,7 @@ const config: Config = {
           background: "#FFFBF5",
           banner: "#FFCBCB",
           input: "#EAE6DE",
+          active: "#FF8C8C"
         }
       }
     },

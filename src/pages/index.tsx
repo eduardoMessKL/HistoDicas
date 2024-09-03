@@ -1,53 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
-
-
-const tecidos  = [
-  {
-    nome: "Epitelial",
-    img: "/images/epitelial.png",
-  },
-  {
-    nome: "Conjuntivo",
-    img: "/images/conjuntivo.png",
-  },
-  {
-    nome: "Muscular",
-    img: "/images/muscular.png"
-  },
-  {
-    nome: "Sanguineo",
-    img: "/images/sanguineo.png",
-  },
-  {
-    nome: "Todos",
-    img: "/images/todos.png"
-  }
-]
-
 
 export default function Index() {
   return (
-    <main className="pt-16">
-        <div className="flex flex-col justify-center">
-          <h2 className="text-center text-2xl">Escolha o tecido que deseja estudar:</h2>
+    <main className="flex flex-col">
+        <div className="flex justify-center pt-12">
+          <h2 className="text-2xl">Antes de comecar, insira seu nome no campo abaixo:</h2>
         </div>
         <div className="flex justify-center">
-          {tecidos.map((tecido) => (
-            <Link key={tecido.nome} href="" className="transition-all p-12 hover:transition-all hover:drop-shadow-2xl 	">
-              <div className="text-center">
-                <p className="pb-5 text-xl">{tecido.nome}</p>
-                <Image
-                  src={tecido.img}
-                  width={100}
-                  height={100}
-                  alt="" 
-                  className="drop-shadow-md" 
-                />
-              </div>
-            </Link>
-          ))}
+          <input type="text" className="bg-wdc-input m-10 p-7 w-6/12 rounded-md shadow-lg text-4xl text-center focus:outline-none"/>
         </div>
+        <Link href="home" className="flex justify-center">
+          <button className="transition p-5 bg-wdc-banner rounded-full w-3/12 text-3xl hover:shadow-lg hover:transition active:bg-wdc-active" >
+            Jogar!
+          </button>
+        </Link>
     </main>
   );
 }
